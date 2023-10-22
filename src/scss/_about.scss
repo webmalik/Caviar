@@ -1,0 +1,107 @@
+.about {
+	&__wrapper {
+		position: relative;
+		background-color: $blue-color;
+		padding: 2.25rem 0 2.75rem;
+
+		.container {
+			position: static;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	&__image {
+		max-width: 100%;
+		position: absolute;
+		top: 2.25rem;
+		bottom: 2.75rem;
+		left: 0;
+		display: flex;
+		align-items: center;
+		@include adaptiv-value("max-width", toPX(43), toPX(0), 1);
+	}
+
+	&__image--wrapper {
+		overflow: hidden;
+		border-radius: 0 20rem 20rem 0;
+		width: 100%;
+
+		picture,
+		img {
+			width: 125%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		grid-area: 1/2;
+	}
+
+	&__title {
+		margin-bottom: 3.06rem;
+		text-align: left;
+	}
+
+	&__label {
+		color: $green-color;
+		font-family: $font-family-montserrat;
+		font-size: 1.5rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 2.15625rem; /* 143.75% */
+		text-transform: uppercase;
+		margin-bottom: 0.88rem;
+	}
+
+	&__text {
+		color: #fff;
+		font-family: $font-family-montserrat;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 2.15625rem; /* 215.625% */
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: end;
+		@include adaptiv-value("margin-top", toPX(4.06), toPX(1.37), 1);
+	}
+
+	&__button {
+	}
+}
+
+@include media-width(1440px) {
+	.about {
+		&__image {
+			@include adaptiv-value("max-width", toPX(32), toPX(10), 1);
+		}
+	}
+}
+
+@include media-width($sm) {
+	.about {
+		&__title {
+			margin-bottom: 19.5rem;
+		}
+
+		&__wrapper {
+			.container {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		&__image {
+			align-items: start;
+			margin-top: 4rem;
+			max-width: 90%;
+		}
+
+		&__image--wrapper {
+			max-height: 18rem;
+		}
+	}
+}

@@ -1,0 +1,182 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: $font-family-montserrat;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	min-height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.lock {
+	overflow: hidden !important;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.container {
+	position: relative;
+	max-width: $container-width;
+	margin: 0 auto;
+}
+
+@include media-width(1300px) {
+	.container {
+		max-width: 1050px;
+	}
+}
+
+@include media-width(1100px) {
+	.container {
+		max-width: 920px;
+	}
+}
+
+@include media-width($md) {
+	.container {
+		max-width: 800px;
+	}
+}
+
+@include media-width(850px) {
+	.container {
+		max-width: $sm;
+	}
+}
+
+@include media-width($sm) {
+	.container {
+		max-width: none;
+		padding: 0 1.3125rem;
+	}
+}
+
+.accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+
+	&.active {
+		max-height: 20rem;
+		transition: all 0.5s ease-in-out;
+	}
+}
+
+@include media-width($md) {
+	.accordion-content-mobile {
+		max-height: 0;
+		overflow: hidden;
+		transition: all 0.5s ease-in-out;
+
+		&.active {
+			max-height: 20rem;
+			transition: all 0.5s ease-in-out;
+		}
+	}
+}
+
+.title {
+	color: $blue-color;
+	text-align: center;
+	font-family: $font-family-judson;
+	@include adaptiv-value("font-size", toPX(2.5), toPX(1.5625), 1);
+	font-style: normal;
+	font-weight: 400;
+	@include adaptiv-value("line-height", toPX(3.75), toPX(2.1875), 1);
+	text-transform: uppercase;
+	@include adaptiv-value("margin-top", toPX(1.3), toPX(0.875), 1);
+
+	&.inversion {
+		color: #fff;
+	}
+}
+
+.subtitle {
+	color: $yellow-color;
+	font-family: $font-family-montserrat;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 2.15625rem;
+	text-align: center;
+}
+
+.description {
+	color: #000;
+	text-align: center;
+	font-family: $font-family-montserrat;
+	@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
+	@include adaptiv-value("margin-top", toPX(1.3), toPX(0.875), 1);
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	&.inversion {
+		color: #fff;
+	}
+}
+
+@include media-width($md) {
+	.description {
+		text-align: justify;
+	}
+}
+
+.button {
+	color: #fff;
+	font-family: $font-family-montserrat;
+	font-size: 0.99275rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.62rem;
+	padding: 0.62rem 0.93rem;
+	background-color: $green-color;
+	box-sizing: border-box;
+
+	&--blue {
+		background-color: $blue-color;
+	}
+
+	&--green {
+		background-color: $green-color;
+	}
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.swiper-pagination-bullet {
+		width: 0.8125rem;
+		height: 0.8125rem;
+		background-color: $green-color;
+		opacity: 1;
+
+		&-active {
+			background-color: $yellow-color;
+		}
+	}
+}
+
+.tab__content {
+	transition: all 0.8s ease-in-out;
+}

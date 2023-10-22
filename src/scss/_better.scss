@@ -1,0 +1,20 @@
+.better {
+	margin-top: 4rem;
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.89rem;
+		@include adaptiv-value("margin-top", toPX(2.88), toPX(1.55), 1);
+	}
+	&__description {
+		@include adaptiv-value("margin-top", toPX(2.5), toPX(2.45), 1);
+	}
+}
+@include media-width($sm) {
+	.better {
+		&__container {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}

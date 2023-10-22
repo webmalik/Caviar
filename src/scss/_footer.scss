@@ -1,0 +1,132 @@
+.footer {
+	position: relative;
+	background-color: $blue-color;
+	padding: 2.88rem 0 5.5rem;
+
+	.container {
+		position: relative;
+	}
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 2fr;
+	}
+
+	&__logo {
+		max-width: 15.8125rem;
+		width: 100%;
+		align-self: center;
+		margin-left: -5rem;
+		picture,
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	&__title {
+		color: #dfb454;
+		font-family: $font-family-montserrat;
+		@include adaptiv-value("font-size", toPX(1.25), toPX(1), 1);
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		margin-bottom: 1.13rem;
+	}
+
+	&__item {
+		color: #fff;
+		font-family: $font-family-montserrat;
+		@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__link {
+		color: #dfb453;
+		font-family: $font-family-montserrat;
+		@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+	}
+
+	&__social {
+	}
+
+	&__icons {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		gap: 0.58rem;
+		max-width: 3.8rem * 6;
+		flex-wrap: wrap;
+		right: 0rem;
+		bottom: 0rem;
+	}
+
+	&__icon {
+		picture,
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+@include media-width($md) {
+	.footer {
+		padding: 2.06rem 0 3.8rem;
+		&__wrapper {
+			grid-template-columns: 1fr 1fr;
+			justify-items: center;
+			gap: 2rem;
+		}
+		&__logo {
+			grid-area: 1/1/1/3;
+			margin: 0 auto;
+		}
+		&__menu {
+			grid-area: 2/1/2/2;
+		}
+		&__info {
+			grid-area: 2/2/2/2;
+			flex-direction: column;
+		}
+
+		&__icons {
+			position: relative;
+			justify-content: space-between;
+			margin: 3rem auto 0;
+		}
+	}
+}
+
+@include media-width($sm) {
+	.footer {
+		&__wrapper {
+			gap: 1rem;
+		}
+		&__icon {
+			max-width: 3.13556rem;
+		}
+	}
+}

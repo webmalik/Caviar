@@ -1,0 +1,31 @@
+.partners {
+	@include adaptiv-value("margin-top", toPX(5.64), toPX(3.5), 1);
+	@include adaptiv-value("margin-bottom", toPX(5.99), toPX(3.5), 1);
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		align-items: center;
+		gap: 2.04rem;
+	}
+
+	&__item {
+		text-align: center;
+		margin: 0 auto;
+		picture,
+		img,
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+@include media-width($sm) {
+	.partners {
+		&__wrapper {
+			flex-wrap: wrap;
+		}
+	}
+}
