@@ -5,6 +5,18 @@
 		align-items: center;
 	}
 
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2.5rem 2rem;
+		@include adaptiv-value("margin-top", toPX(2.37), toPX(1.5), 1);
+
+		.card__item {
+			max-width: 31%;
+		}
+	}
+
 	&__title {
 		color: $blue-color;
 		text-align: center;
@@ -56,5 +68,28 @@
 
 	&__button {
 		margin: 2rem auto 0;
+	}
+}
+
+@include media-width($md) {
+	.card {
+		&__list {
+			gap: 2.5rem 2rem;
+
+			.card__item {
+				max-width: 45%;
+			}
+		}
+	}
+}
+@include media-width($sm) {
+	.card {
+		&__list {
+			gap: 1.12rem;
+
+			.card__item {
+				max-width: 100%;
+			}
+		}
 	}
 }
