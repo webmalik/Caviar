@@ -1,0 +1,36 @@
+.stay {
+	@include adaptiv-value("margin-top", toPX(3.87), toPX(1.12), 1);
+	@include adaptiv-value("margin-bottom", toPX(6.69), toPX(3.44), 1);
+	&__form {
+		max-width: 28rem;
+		border-bottom: 0.0625rem solid #000;
+		display: flex;
+		gap: 1.5rem;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 auto;
+		@include adaptiv-value("margin-top", toPX(2.38), toPX(1.5), 1);
+
+		input {
+			background-color: transparent;
+			border: none;
+			outline: none;
+			color: #000;
+			font-family: $font-family-montserrat;
+			font-size: 0.875rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 2.15625rem;
+			width: 100%;
+
+			&::placeholder {
+				color: #000;
+				font-family: $font-family-montserrat;
+				font-size: 0.875rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 2.15625rem; /* 246.429% */
+			}
+		}
+	}
+}

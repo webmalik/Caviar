@@ -112,7 +112,7 @@
 	&__item {
 		color: #fff;
 		font-family: $font-family-montserrat;
-		font-size: 0.9375rem;
+		@include adaptiv-value("font-size", toPX(0.9375), toPX(1.25), 1);
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
