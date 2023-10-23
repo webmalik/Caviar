@@ -75,20 +75,6 @@ button {
   font-style: normal;
 }
 @font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
   font-family: "Judson";
   font-display: swap;
   src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
@@ -105,22 +91,15 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
-  font-weight: 600;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -135,6 +114,27 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
   font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 /*
@@ -729,7 +729,7 @@ a {
 .menu__item {
   color: #fff;
   font-family: "Montserrat", sans-serif;
-  font-size: 0.9375rem;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -738,6 +738,11 @@ a {
   transition: all 0.3s ease-in-out;
   padding: 2.5rem 0;
   cursor: pointer;
+}
+@media (max-width: 1067px) {
+  .menu__item {
+    font-size: calc(20px + -5 * ((100vw - 390px) / 677));
+  }
 }
 .menu__link {
   color: inherit;
@@ -1307,12 +1312,17 @@ a {
   color: #000;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 2.0625rem;
   margin-top: 22.08px;
   margin-bottom: 32.96px;
+}
+@media (max-width: 1067px) {
+  .more__label {
+    font-size: calc(14px + 6 * ((100vw - 390px) / 677));
+  }
 }
 @media (max-width: 1067px) {
   .more__label {
@@ -1328,10 +1338,15 @@ a {
   color: #000;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 2.0625rem;
+}
+@media (max-width: 1067px) {
+  .more__label a {
+    font-size: calc(14px + 6 * ((100vw - 390px) / 677));
+  }
 }
 .more__wrapper {
   display: grid;
@@ -1343,10 +1358,15 @@ a {
   color: #000;
   text-align: justify;
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (max-width: 1067px) {
+  .more__text {
+    font-size: calc(14px + 2 * ((100vw - 390px) / 677));
+  }
 }
 .more__image {
   max-width: 100%;
@@ -1461,9 +1481,17 @@ a {
 @media (max-width: 767px) {
   .about__title {
     margin-bottom: 19.5rem;
+    text-align: center;
   }
   .about__wrapper .container {
     grid-template-columns: 1fr;
+  }
+  .about__label {
+    text-align: center;
+  }
+  .about__text {
+    text-align: justify;
+    line-height: normal;
   }
   .about__image {
     align-items: start;
@@ -1681,6 +1709,9 @@ a {
   .faq__content {
     max-width: none;
   }
+  .faq__quetion {
+    justify-content: center;
+  }
   .faq__image {
     top: 8rem;
     max-height: 23rem;
@@ -1821,6 +1852,12 @@ a {
   overflow: hidden;
   gap: 0.19rem;
   justify-content: center;
+  margin-bottom: 80.96px;
+}
+@media (max-width: 1067px) {
+  .gallery {
+    margin-bottom: calc(20px + 60.96 * ((100vw - 390px) / 677));
+  }
 }
 .gallery__item {
   min-width: 65%;
@@ -1832,6 +1869,20 @@ a {
   object-fit: cover;
 }
 
+@media (max-width: 992px) {
+  .gallery {
+    justify-content: end;
+  }
+  .gallery__item {
+    min-width: 150%;
+  }
+  .gallery__item picture,
+  .gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 .join {
   background-color: #047678;
 }

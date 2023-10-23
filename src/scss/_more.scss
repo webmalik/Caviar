@@ -17,7 +17,7 @@
 		color: #000;
 		text-align: center;
 		font-family: $font-family-montserrat;
-		font-size: 1.25rem;
+		@include adaptiv-value("font-size", toPX(1.25), toPX(0.875), 1);
 		font-style: normal;
 		font-weight: 400;
 		line-height: 2.0625rem;
@@ -28,7 +28,7 @@
 			color: #000;
 			text-align: center;
 			font-family: $font-family-montserrat;
-			font-size: 1.25rem;
+			@include adaptiv-value("font-size", toPX(1.25), toPX(0.875), 1);
 			font-style: normal;
 			font-weight: 600;
 			line-height: 2.0625rem;
@@ -46,7 +46,7 @@
 		color: #000;
 		text-align: justify;
 		font-family: $font-family-montserrat;
-		font-size: 1rem;
+		@include adaptiv-value("font-size", toPX(1), toPX(0.875), 1);
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;

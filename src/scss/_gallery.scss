@@ -3,6 +3,7 @@
 	overflow: hidden;
 	gap: 0.19rem;
 	justify-content: center;
+	@include adaptiv-value("margin-bottom", toPX(5.06), toPX(1.25), 1);
 	&__item {
 		min-width: 65%;
 		picture,
@@ -10,6 +11,21 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+	}
+}
+
+@include media-width($md) {
+	.gallery {
+		justify-content: end;
+		&__item {
+			min-width: 150%;
+			picture,
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 }

@@ -86,12 +86,22 @@
 	.about {
 		&__title {
 			margin-bottom: 19.5rem;
+			text-align: center;
 		}
 
 		&__wrapper {
 			.container {
 				grid-template-columns: 1fr;
 			}
+		}
+
+		&__label {
+			text-align: center;
+		}
+
+		&__text {
+			text-align: justify;
+			line-height: normal;
 		}
 
 		&__image {
