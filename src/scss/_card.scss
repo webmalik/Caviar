@@ -14,6 +14,7 @@
 
 		.card__item {
 			max-width: 31%;
+			display: flex !important;
 		}
 	}
 
@@ -71,6 +72,23 @@
 	}
 }
 
+@include media-width($sm, min) {
+	.card {
+		&__wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 2.5rem 2rem;
+			@include adaptiv-value("margin-top", toPX(2.37), toPX(1.5), 1);
+
+			.card__item {
+				max-width: 31%;
+				display: flex !important;
+			}
+		}
+	}
+}
+
 @include media-width($md) {
 	.card {
 		&__list {
@@ -86,10 +104,15 @@
 	.card {
 		&__list {
 			gap: 1.12rem;
+			@include adaptiv-value("margin-top", toPX(2.37), toPX(1.5), 1);
 
 			.card__item {
-				max-width: 100%;
+				display: flex !important;
+				max-width: none;
 			}
+		}
+		&__pagination {
+			margin-top: 2rem;
 		}
 	}
 }

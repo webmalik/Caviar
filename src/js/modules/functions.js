@@ -186,6 +186,78 @@ export function best() {
 	});
 }
 
+export function better() {
+	if (window.innerWidth < 768) {
+		const container = document.querySelector('.better__container');
+		const wrapper = container.querySelector('.better__wrapper');
+		if (wrapper) {
+			const slides = wrapper.querySelectorAll('.card__item');
+
+			container.classList.add('swiper');
+			wrapper.classList.add('swiper-wrapper');
+			slides.forEach((slide) => {
+				slide.classList.add('swiper-slide');
+			});
+
+			const best = new Swiper('.better__container', {
+				loop: true,
+				speed: 800,
+				modules: [Pagination, Autoplay],
+				slidesPerView: 1,
+				centeredSlides: true,
+				observer: true,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
+				},
+				pagination: {
+					el: '.better__pagination',
+					clickable: true,
+				},
+			});
+		}
+
+	}
+
+}
+
+export function osetra() {
+	if (window.innerWidth < 768) {
+		const container = document.querySelector('.card__list');
+		if (container) {
+			const wrapper = document.querySelector('.card__wrapper');
+			const slides = wrapper.querySelectorAll('.card__item');
+
+			container.classList.add('swiper');
+			wrapper.classList.add('swiper-wrapper');
+			slides.forEach((slide) => {
+				slide.classList.add('swiper-slide');
+			});
+
+			const best = new Swiper(container, {
+				loop: true,
+				speed: 800,
+				modules: [Pagination, Autoplay],
+				slidesPerView: 1,
+				centeredSlides: true,
+				observer: true,
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
+				},
+				pagination: {
+					el: '.card__pagination',
+					clickable: true,
+				},
+			});
+		}
+
+	}
+
+}
+
 export function reviews() {
 	const best = new Swiper('.reviews__slider', {
 		loop: true,

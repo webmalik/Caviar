@@ -5,6 +5,8 @@ wmFunctions.burgerMenu();
 wmFunctions.accordionMobile(true);
 wmFunctions.banner();
 wmFunctions.best();
+wmFunctions.better();
+wmFunctions.osetra();
 wmFunctions.reviews();
 
 
