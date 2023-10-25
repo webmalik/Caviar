@@ -146,14 +146,6 @@ button {
 @font-face {
   font-family: "Judson";
   font-display: swap;
-  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Judson";
-  font-display: swap;
   src: url("../fonts/Judson-400.woff") format("woff"), url("../fonts/Judson-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -168,6 +160,22 @@ button {
 }
 
 @font-face {
+  font-family: "Judson";
+  font-display: swap;
+  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
@@ -180,6 +188,14 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -204,22 +220,6 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
   font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -1403,29 +1403,161 @@ a {
   margin-top: 54.08px;
 }
 
+.reviews__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  align-items: center;
+  border-bottom: 2px solid #001a32;
+  margin-bottom: 1.5rem;
+}
+
+.reviews__info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.reviews__info .reviews__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reviews__info .reviews__stars {
+  margin-top: 8px;
+  margin-bottom: 6.08px;
+}
+
+.reviews__slide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.reviews__date {
+  color: #001a32;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+  line-height: 100%;
+  /* 0% */
+}
+
+.reviews__slide-title {
+  color: #001a32;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+  line-height: 100%;
+  /* 0% */
+  letter-spacing: -0.05369rem;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.reviews__arrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 17.28px;
+  margin-bottom: 6.08px;
+}
+
+.reviews__arrow-prev,
+.reviews__arrow-next {
+  cursor: pointer;
+  font-size: 32px;
+  font-family: "Judson", serif;
+  font-weight: 600;
+}
+
+.reviews__arrow-prev::before {
+  content: "<";
+}
+
+.reviews__arrow-next::before {
+  content: ">";
+}
+
 .reviews__slide {
   display: flex !important;
+  flex-direction: column;
   align-items: center;
+}
+
+.reviews__author {
+  font-weight: 600;
+  font-style: normal;
+  color: #001a32;
+  text-wrap: balance;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12.89104px;
+  line-height: 1.73725rem;
+  /* 215.625% */
+  width: 100%;
+  text-align: left;
+}
+
+.reviews__footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reviews__name {
+  max-width: 45%;
+  width: 100%;
+  text-align: center;
+}
+
+.reviews__name span {
+  color: #001a32;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  /* 0% */
+  letter-spacing: -0.05369rem;
+  text-align: center;
+}
+
+.reviews__image {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 45%;
 }
 
 .reviews__image picture,
 .reviews__image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .reviews__content {
   display: flex;
-  flex-direction: column;
-  max-width: 16rem;
+  width: 100%;
+  gap: 1rem;
 }
 
 .reviews__stars {
   display: flex;
   align-items: center;
   gap: 0.125rem;
+}
+
+.reviews__stars span svg {
+  width: 1.5rem;
 }
 
 .reviews__title {
@@ -1446,10 +1578,14 @@ a {
 }
 
 .reviews__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #000;
+  text-wrap: balance;
   font-family: "Montserrat", sans-serif;
   font-size: 12.89104px;
-  font-style: normal;
+  font-style: italic;
   font-weight: 400;
   line-height: 1.73725rem;
   /* 215.625% */
@@ -2169,6 +2305,43 @@ a {
     margin-top: calc(24px + 30.08 * ((100vw - 390px) / 677));
   }
 
+  .reviews__info .reviews__stars {
+    margin-top: calc(8px + 0 * ((100vw - 390px) / 677));
+  }
+
+  .reviews__info .reviews__stars {
+    margin-bottom: calc(6.08px + 0 * ((100vw - 390px) / 677));
+  }
+
+  .reviews__date {
+    font-size: calc(14px + 0 * ((100vw - 390px) / 677));
+  }
+
+  .reviews__slide-title {
+    font-size: calc(14px + 6 * ((100vw - 390px) / 677));
+  }
+
+  .reviews__arrow {
+    margin-top: calc(17.28px + 0 * ((100vw - 390px) / 677));
+  }
+
+  .reviews__arrow {
+    margin-bottom: calc(6.08px + 0 * ((100vw - 390px) / 677));
+  }
+
+  .reviews__arrow-prev,
+  .reviews__arrow-next {
+    font-size: calc(24px + 8 * ((100vw - 390px) / 677));
+  }
+
+  .reviews__author {
+    font-size: calc(14px + -1.10896 * ((100vw - 390px) / 677));
+  }
+
+  .reviews__name span {
+    font-size: calc(12px + 0 * ((100vw - 390px) / 677));
+  }
+
   .reviews__title {
     font-size: calc(16px + 5.48496 * ((100vw - 390px) / 677));
   }
@@ -2672,6 +2845,11 @@ a {
     text-align: center;
   }
 
+  .about__wrapper {
+    margin-top: 1.75rem;
+    padding-top: 0.5rem;
+  }
+
   .about__wrapper .container {
     grid-template-columns: 1fr;
   }
@@ -2687,7 +2865,7 @@ a {
 
   .about__image {
     align-items: start;
-    margin-top: 4rem;
+    margin-top: 2.5rem;
     max-width: 90%;
   }
 
@@ -2711,6 +2889,19 @@ a {
 
   .reviews__slide {
     flex-direction: column;
+  }
+
+  .reviews__header {
+    flex-direction: column;
+  }
+
+  .reviews__info {
+    width: 100%;
+    justify-content: end;
+  }
+
+  .reviews__stars span svg {
+    width: 1rem;
   }
 
   .partners__wrapper {

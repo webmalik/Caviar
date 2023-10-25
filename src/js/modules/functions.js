@@ -262,32 +262,40 @@ export function reviews() {
 	const best = new Swiper('.reviews__slider', {
 		loop: true,
 		speed: 800,
-		modules: [Pagination, Autoplay],
+		modules: [Pagination, Autoplay, Navigation],
 		slidesPerView: 1,
 		centeredSlides: true,
 		observer: true,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// 	pauseOnMouseEnter: true,
+		// },
+		// pagination: {
+		// 	el: '.reviews__pagination',
+		// 	clickable: true,
+		// },
+		navigation: {
+			prevEl: '.reviews__arrow-prev',
+			nextEl: '.reviews__arrow-next'
 		},
-		pagination: {
-			el: '.reviews__pagination',
-			clickable: true,
-		},
+
 
 		breakpoints: {
 			400: {
-				slidesPerView: 1.5,
+				slidesPerView: 1,
+				slidesPerGroup: 1,
 				spaceBetween: 20
 			},
 
 			767: {
 				slidesPerView: 2,
+				slidesPerGroup: 2,
 				spaceBetween: 20
 			},
 			992: {
-				slidesPerView: 3.3,
+				slidesPerGroup: 3,
+				slidesPerView: 3,
 				spaceBetween: 20
 			},
 		}
