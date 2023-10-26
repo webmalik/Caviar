@@ -8,6 +8,7 @@ wmFunctions.best();
 wmFunctions.better();
 wmFunctions.osetra();
 wmFunctions.reviews();
+wmFunctions.readMore(767);
 
 
 const faq = document.querySelector('.faq')

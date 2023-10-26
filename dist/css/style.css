@@ -170,6 +170,22 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
   src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -178,16 +194,16 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -212,22 +228,6 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
   font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
-  font-weight: 600;
   font-style: normal;
 }
 
@@ -2083,6 +2083,67 @@ a {
   /* 246.429% */
 }
 
+.seo__block {
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  max-height: 8rem;
+  margin-bottom: 0;
+}
+
+.seo__all {
+  margin-top: 1rem;
+  color: #001a32;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.75rem;
+  order: 5;
+}
+
+.seo__all::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -400%;
+  right: 0;
+  bottom: 100%;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8705882353) 30%, rgba(255, 255, 255, 0.6862745098) 70%, rgba(252, 252, 252, 0) 100%);
+}
+
+.seo__all::after {
+  content: "";
+  display: block;
+  min-width: 19.2px;
+  min-height: 19.2px;
+  background-image: url("../img/arrow_readmore.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.seo__all.open::after {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-180deg);
+}
+
+.seo__all.open::before {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
 @media (min-width: 767px) {
   .better__wrapper {
     display: grid;
@@ -2442,6 +2503,18 @@ a {
 
   .stay__form {
     margin-top: calc(24px + 14.08 * ((100vw - 390px) / 677));
+  }
+
+  .seo__all {
+    font-size: calc(14px + 2 * ((100vw - 390px) / 677));
+  }
+
+  .seo__all::after {
+    min-width: calc(14px + 5.2 * ((100vw - 390px) / 677));
+  }
+
+  .seo__all::after {
+    min-height: calc(14px + 5.2 * ((100vw - 390px) / 677));
   }
 }
 
@@ -2997,3 +3070,5 @@ a {
 }
 
 .webp .banner__item::before { background-image: url(../img/banner-icon.webp); }
+
+.webp .seo__all::after { background-image: url(../img/arrow_readmore.webp); }

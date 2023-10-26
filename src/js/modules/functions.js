@@ -349,3 +349,34 @@ export function tabs(container) {
 	}
 
 }
+export function readMore(viewsport = 2000) {
+	const textBlocks = document.querySelectorAll(".seo__block");
+
+	if (viewsport === 'all' || window.innerWidth < viewsport) {
+		if (textBlocks) {
+			let max = 1000;
+			let hideHeight = 128;
+
+			textBlocks.forEach((block) => {
+				block.style.maxHeight = hideHeight;
+
+				let showMoreLink = document.createElement('a');
+				showMoreLink.classList.add('seo__all');
+				showMoreLink.textContent = 'Read more';
+				showMoreLink.href = '#'; // Додайте посилання на правильну сторінку, яку користувач має відвідати
+				block.parentNode.insertBefore(showMoreLink, block.nextSibling);
+
+				showMoreLink.addEventListener('click', function (event) {
+					event.preventDefault();
+					if (parseFloat(block.style.maxHeight) === max) {
+						block.style.maxHeight = hideHeight + 'px';
+						showMoreLink.classList.remove('open');
+					} else {
+						block.style.maxHeight = max + 'px';
+						showMoreLink.classList.add('open');
+					}
+				});
+			});
+		}
+	}
+}
