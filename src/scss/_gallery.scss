@@ -18,6 +18,8 @@
 @include media-width($md) {
 	.gallery {
 		justify-content: end;
+		flex-direction: column;
+		gap: 0;
 		&__item {
 			min-width: 150%;
 			picture,

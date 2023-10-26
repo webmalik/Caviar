@@ -170,22 +170,6 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
   src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -202,8 +186,8 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
-  font-weight: 600;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -228,6 +212,22 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -791,6 +791,10 @@ a {
   position: relative;
 }
 
+.banner__image.mobile {
+  display: none;
+}
+
 .banner__image picture,
 .banner__image img {
   width: 100%;
@@ -874,6 +878,11 @@ a {
   gap: 0.75rem;
 }
 
+.banner__item span,
+.banner__item a {
+  color: #efb74c;
+}
+
 .banner__item::before {
   content: "";
   display: block;
@@ -948,12 +957,13 @@ a {
 }
 
 .banner__telephone {
-  color: #dfb453;
+  color: #efb74c;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 2.15625rem;
+  padding-left: 1.4rem;
 }
 
 .better {
@@ -2585,6 +2595,11 @@ a {
     justify-content: center;
   }
 
+  .banner__content {
+    padding-top: 4rem;
+    justify-content: start;
+  }
+
   .banner__image {
     position: relative;
     overflow: hidden;
@@ -2595,8 +2610,6 @@ a {
     position: relative;
     width: auto;
     height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .banner__pagination {
@@ -2656,6 +2669,8 @@ a {
 
   .gallery {
     justify-content: end;
+    flex-direction: column;
+    gap: 0;
   }
 
   .gallery__item {
@@ -2941,6 +2956,37 @@ a {
 @media (max-width: 767px) and (max-width: 1067px) {
   .card__list {
     margin-top: calc(24px + 13.92 * ((100vw - 390px) / 677));
+  }
+}
+
+@media (max-width: 500px) {
+  .banner__title br {
+    display: none;
+  }
+
+  .banner__center {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    justify-content: start;
+    background: none;
+  }
+
+  .banner__center .banner__logo {
+    margin: 10rem auto 0;
+  }
+
+  .banner__image.desctop {
+    display: none;
+  }
+
+  .banner__image.mobile {
+    display: block;
+  }
+
+  .banner__image.mobile picture,
+  .banner__image.mobile img {
+    width: 100%;
   }
 }
 

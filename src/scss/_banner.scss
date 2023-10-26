@@ -7,6 +7,9 @@
 	}
 
 	&__image {
+		&.mobile {
+			display: none;
+		}
 		picture,
 		img {
 			width: 100%;
@@ -87,6 +90,11 @@
 		align-items: center;
 		gap: 0.75rem;
 
+		span,
+		a {
+			color: #efb74c;
+		}
+
 		&::before {
 			content: "";
 			display: block;
@@ -159,12 +167,13 @@
 	}
 
 	&__telephone {
-		color: $yellow-color;
+		color: #efb74c;
 		font-family: $font-family-montserrat;
 		font-size: 1rem;
 		font-style: normal;
 		font-weight: 400;
 		line-height: 2.15625rem;
+		padding-left: 1.4rem;
 	}
 }
 
@@ -175,6 +184,10 @@
 			display: flex;
 			justify-content: center;
 		}
+		&__content {
+			padding-top: 4rem;
+			justify-content: start;
+		}
 		&__image {
 			position: relative;
 			overflow: hidden;
@@ -184,8 +197,8 @@
 				position: relative;
 				width: auto;
 				height: 100%;
-				left: 50%;
-				transform: translateX(-50%);
+				// left: 50%;
+				// transform: translateX(-50%);
 			}
 		}
 		&__pagination {
@@ -206,6 +219,42 @@
 		&__subtitle {
 			margin-top: 1.25rem;
 			margin-bottom: 0.75rem;
+		}
+	}
+}
+@include media-width(500px) {
+	.banner {
+		&__title {
+			//text-wrap: balance;
+			br {
+				display: none;
+			}
+		}
+
+		&__content {
+		}
+		&__center {
+			margin: 0 auto;
+			width: 100%;
+			padding: 0;
+			justify-content: start;
+			background: none;
+
+			.banner__logo {
+				margin: 10rem auto 0;
+			}
+		}
+		&__image {
+			&.desctop {
+				display: none;
+			}
+			&.mobile {
+				display: block;
+				picture,
+				img {
+					width: 100%;
+				}
+			}
 		}
 	}
 }
