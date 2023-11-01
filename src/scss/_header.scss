@@ -4,6 +4,11 @@
 		background-color: $green-color;
 	}
 
+	&__inverce {
+		background-color: #001a32;
+		border-bottom: 5px solid $green-color;
+	}
+
 	&__container {
 		display: flex;
 		align-items: center;
@@ -34,6 +39,11 @@
 		width: 100%;
 
 		display: none;
+
+		&.header__logo-inverce {
+			display: none;
+			max-width: 5rem;
+		}
 
 		picture,
 		img {
@@ -203,6 +213,15 @@
 		left: 0;
 		right: 0;
 		z-index: 2;
+
+		&__inverce {
+			background-color: #001a32;
+			border-bottom: 5px solid $green-color;
+
+			.header__container {
+				padding: 0.5rem 1.31rem;
+			}
+		}
 		&__container {
 			background-color: transparent;
 			padding: 1.69rem 2.25rem;

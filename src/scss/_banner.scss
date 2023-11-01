@@ -87,7 +87,7 @@
 		font-weight: 400;
 		line-height: 2.15625rem; /* 215.625% */
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		gap: 0.75rem;
 
 		span,
@@ -98,8 +98,9 @@
 		&::before {
 			content: "";
 			display: block;
-			width: 0.68531rem;
-			height: 0.76594rem;
+			min-width: 0.68531rem;
+			min-height: 0.76594rem;
+			margin-top: 0.5rem;
 			background-image: url("../img/banner-icon.png");
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -166,6 +167,11 @@
 		margin-bottom: 1.75rem;
 	}
 
+	.sets__subtitle {
+		@include adaptiv-value("font-size", toPX(2), toPX(1.25), 1);
+		font-weight: 700;
+	}
+
 	&__telephone {
 		color: #efb74c;
 		font-family: $font-family-montserrat;
@@ -187,6 +193,10 @@
 		&__content {
 			padding-top: 4rem;
 			justify-content: start;
+		}
+		.sets__subtitle {
+			padding: 0;
+			margin-top: -1rem;
 		}
 		&__image {
 			position: relative;

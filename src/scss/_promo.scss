@@ -8,6 +8,10 @@
 			@include adaptiv-value("line-height", toPX(2.78125), toPX(2.1875), 1);
 			line-height: 2.78125rem;
 		}
+
+		&.title__yellow {
+			@include adaptiv-value("padding-top", toPX(1.5), toPX(3.13), 1);
+		}
 	}
 
 	&__description {

@@ -1,0 +1,292 @@
+.shopping {
+	@include adaptiv-value("margin-top", toPX(2.06), toPX(0.81), 1);
+	&__title {
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	&__card {
+		display: flex;
+		align-items: flex-start;
+		gap: 1.25rem;
+		width: 100%;
+	}
+
+	&__image {
+		max-width: 20rem;
+		picture,
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.75rem;
+		width: 100%;
+		padding-top: 1.5rem;
+	}
+
+	&__card-title {
+		color: #0b253b;
+		font-variant-numeric: lining-nums tabular-nums;
+		font-family: $font-family-montserrat;
+		font-size: 1.25rem;
+		font-style: normal;
+		font-weight: 500;
+		max-width: 25rem;
+
+		&.mobile {
+			display: none;
+		}
+	}
+
+	&__price {
+		color: #000;
+		font-family: $font-family-montserrat;
+		font-size: 1.6045rem;
+		font-style: normal;
+		font-weight: 700;
+		letter-spacing: -0.01606rem;
+	}
+
+	&__desc {
+		color: #010101;
+		font-family: $font-family-montserrat;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		text-transform: uppercase;
+	}
+
+	&__card-total {
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	&__counter {
+		display: flex;
+		align-items: center;
+		margin-top: -0.5rem;
+		span {
+			color: #fff;
+			font-family: $font-family-montserrat;
+			font-size: 0.96269rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-transform: uppercase;
+			background-color: #047678;
+			padding: 0.5rem 0.75rem;
+		}
+
+		a {
+			color: #040404;
+			font-family: $font-family-montserrat;
+			font-size: 0.96269rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-transform: uppercase;
+			padding: 0.5rem;
+		}
+	}
+
+	&__sidebar {
+		width: 100%;
+		max-width: 18rem;
+		box-sizing: border-box;
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		span {
+			color: #047678;
+			font-family: $font-family-montserrat;
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+		}
+
+		p {
+			color: #000;
+			font-family: $font-family-montserrat;
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+		}
+
+		&.bold {
+			p {
+				font-weight: 600;
+			}
+		}
+	}
+
+	&__total {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1.25rem 0;
+		border-top: 0.125rem solid #001a32;
+		border-bottom: 0.125rem solid #001a32;
+		margin-top: 0.44rem;
+		margin-bottom: 1.31rem;
+		p {
+			color: #000;
+			font-family: $font-family-montserrat;
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+		}
+		span {
+			color: #047678;
+			font-family: $font-family-montserrat;
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+		}
+	}
+
+	&__question {
+		color: #000;
+		font-family: $font-family-montserrat;
+		font-size: 0.8125rem;
+		font-style: normal;
+		font-weight: 300;
+		line-height: normal;
+	}
+
+	&__promo {
+		background-color: #047678;
+		padding: 0.25rem 0.31rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 0.75rem;
+		margin-bottom: 1rem;
+		box-sizing: border-box;
+
+		form {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+		}
+		input {
+			color: #000;
+			font-family: $font-family-montserrat;
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			background-color: #fff;
+			border: none;
+			outline: none;
+			padding: 0.44rem 1.13rem;
+
+			&::placeholder {
+				color: #000;
+				font-family: $font-family-montserrat;
+				font-size: 1rem;
+				font-style: normal;
+				font-weight: 300;
+				line-height: normal;
+			}
+		}
+
+		button {
+			background-color: transparent;
+			border: none;
+			outline: none;
+			color: #fff;
+			font-family: $font-family-montserrat;
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+		}
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+		color: #fff;
+		font-family: $font-family-montserrat;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-transform: uppercase;
+		background: #001a32;
+		padding: 0.38rem 1.25rem;
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+@include media-width($md) {
+	.shopping {
+		margin-top: 9rem;
+		&__wrapper {
+			flex-direction: column;
+			gap: 4rem;
+		}
+
+		&__content {
+			padding-top: 0;
+		}
+
+		&__card {
+			flex-direction: column;
+			align-items: center;
+			margin-top: 0.81rem;
+		}
+
+		&__sidebar {
+			max-width: none;
+		}
+
+		&__card-title {
+			display: none;
+			&.mobile {
+				display: block;
+			}
+		}
+	}
+}
