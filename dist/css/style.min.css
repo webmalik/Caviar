@@ -63,22 +63,29 @@ button {
 @font-face {
   font-family: "Judson";
   font-display: swap;
-  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Judson";
-  font-display: swap;
-  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Judson";
-  font-display: swap;
   src: url("../fonts/Judson-400.woff") format("woff"), url("../fonts/Judson-400.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Judson";
+  font-display: swap;
+  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Judson";
+  font-display: swap;
+  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
@@ -93,20 +100,6 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
   font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -128,6 +121,13 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
@@ -867,6 +867,9 @@ a {
     display: block;
     margin: 0 auto;
   }
+  .header__logo--mobile.header__logo-inverce {
+    display: block;
+  }
   .header__account {
     display: none;
   }
@@ -1021,6 +1024,7 @@ a {
 .banner__list {
   display: flex;
   flex-direction: column;
+  gap: 0.19rem;
 }
 .banner__item {
   color: #fff;
@@ -1028,10 +1032,15 @@ a {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 2.15625rem; /* 215.625% */
+  line-height: 34.5px;
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
+}
+@media (max-width: 1067px) {
+  .banner__item {
+    line-height: calc(24.5px + 10 * ((100vw - 390px) / 677));
+  }
 }
 .banner__item span,
 .banner__item a {
@@ -1160,6 +1169,9 @@ a {
   .banner__logo img {
     width: 100%;
     height: 100%;
+  }
+  .banner__item br {
+    display: none;
   }
   .banner__who {
     padding-top: 8rem;
@@ -2850,6 +2862,14 @@ a {
 }
 .gift__title {
   margin: 0;
+}
+.gift__button {
+  margin-top: 32px;
+}
+@media (max-width: 1067px) {
+  .gift__button {
+    margin-top: calc(7.04px + 24.96 * ((100vw - 390px) / 677));
+  }
 }
 .gift__text {
   color: #000;

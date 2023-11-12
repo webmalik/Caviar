@@ -254,6 +254,10 @@
 		&__logo--mobile {
 			display: block;
 			margin: 0 auto;
+
+			&.header__logo-inverce {
+				display: block;
+			}
 		}
 
 		&__account {

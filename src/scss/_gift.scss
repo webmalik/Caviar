@@ -23,6 +23,10 @@
 		margin: 0;
 	}
 
+	&__button {
+		@include adaptiv-value("margin-top", toPX(2), toPX(0.44), 1);
+	}
+
 	&__text {
 		color: #000;
 		font-family: $font-family-montserrat;
