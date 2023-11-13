@@ -36,6 +36,15 @@
 		line-height: 1.46875rem;
 		text-wrap: balance;
 	}
+
+	&__rectangle {
+		margin-top: 2rem;
+		padding-bottom: 2rem;
+
+		.rectangle__inner {
+			margin-top: 0;
+		}
+	}
 }
 
 @include media-width($md) {

@@ -1,0 +1,39 @@
+.club {
+	&__content {
+		max-width: 50%;
+	}
+	&__label {
+		@include adaptiv-value("margin-bottom", toPX(2.75), toPX(1), 1);
+		@include adaptiv-value("font-size", toPX(1.5), toPX(1.25), 1);
+	}
+	&__button {
+	}
+
+	.faq__image {
+		max-width: 50%;
+	}
+
+	.about__title {
+		margin-bottom: 1rem;
+	}
+}
+
+@include media-width($md) {
+	.club {
+		&__content {
+			max-width: 100%;
+		}
+		&__label {
+		}
+		&__button {
+		}
+
+		.about__title {
+			margin-bottom: 27rem;
+		}
+
+		.faq__image {
+			max-width: 90%;
+		}
+	}
+}
