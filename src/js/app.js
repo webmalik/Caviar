@@ -17,4 +17,7 @@ wmFunctions.tabs(faq);
 const faqPage = document.querySelector('.faq-page')
 wmFunctions.tabs(faqPage);
 
+const recipesPage = document.querySelector('.recipes-page')
+wmFunctions.tabs(recipesPage);
+
 wmFunctions.accordion(false);
