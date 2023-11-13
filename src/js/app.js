@@ -19,6 +19,9 @@ wmFunctions.tabs(faq);
 const sale = document.querySelector('.special')
 wmFunctions.tabs(sale);
 
+const recipes = document.querySelector('.recipes-page')
+wmFunctions.tabs(recipes);
+
 const faqPage = document.querySelector('.faq-page')
 wmFunctions.tabs(faqPage);
 
