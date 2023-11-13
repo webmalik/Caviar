@@ -118,6 +118,34 @@
 			object-fit: cover;
 		}
 	}
+
+	&-page {
+		.faq {
+			&__content {
+				max-width: 100%;
+			}
+			&__quetion {
+				color: #000;
+			}
+			&__answer {
+				color: #000;
+			}
+			&__wrapper {
+				@include adaptiv-value("margin-top", toPX(6.63), toPX(3.5), 1);
+			}
+			&__menu {
+				@include adaptiv-value("margin-top", toPX(2.19), toPX(1.5), 1);
+				a {
+					color: #001a32;
+					font-weight: 700;
+
+					&::after {
+						background-color: #001a32;
+					}
+				}
+			}
+		}
+	}
 }
 
 @include media-width(1200px) {
