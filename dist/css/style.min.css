@@ -3526,6 +3526,11 @@ a {
 .cert .swiper-wrapper {
   justify-content: space-between;
 }
+.cert__img {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .cert__item {
   display: flex;
   flex-direction: column;
@@ -3537,6 +3542,7 @@ a {
   transition: all 0.3s ease-in-out;
   box-sizing: border-box;
   cursor: pointer;
+  width: 100%;
 }
 @media (max-width: 1067px) {
   .cert__item {
@@ -3553,8 +3559,13 @@ a {
   line-height: normal;
   letter-spacing: -0.025rem;
 }
+.cert__item picture,
+.cert__item img,
 .cert__item svg {
-  height: 100%;
+  max-width: 9.01756rem;
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 .cert__item.mobile {
   display: none;

@@ -11,6 +11,12 @@
 		justify-content: space-between;
 	}
 
+	&__img {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
 	&__item {
 		display: flex;
 		flex-direction: column;
@@ -22,6 +28,7 @@
 		transition: $hover-transition;
 		box-sizing: border-box;
 		cursor: pointer;
+		width: 100%;
 
 		h3 {
 			color: #001a32;
@@ -34,8 +41,14 @@
 			letter-spacing: -0.025rem;
 		}
 
+		picture,
+		img,
 		svg {
-			height: 100%;
+			max-width: 9.01756rem;
+			display: block;
+			//height: 100%;
+			width: 100%;
+			object-fit: cover;
 		}
 
 		&.mobile {
