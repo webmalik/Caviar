@@ -1249,6 +1249,24 @@ a {
   flex-direction: column;
   align-items: center;
 }
+.card__item.sale .card__image {
+  position: relative;
+}
+.card__item.sale .card__image::before {
+  position: absolute;
+  content: "sale";
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 0% */
+  text-transform: uppercase;
+  padding: 0.31rem 0.44rem;
+  background: #047678;
+  top: 1.12rem;
+  right: 3rem;
+}
 .card__item.sale .card__price {
   display: flex;
   align-items: center;
@@ -3614,24 +3632,41 @@ a {
 }
 .special__wrapper {
   margin-top: 72px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.95rem 1.88rem;
 }
 @media (max-width: 1067px) {
   .special__wrapper {
     margin-top: calc(59.04px + 12.96 * ((100vw - 390px) / 677));
   }
 }
+.special__wrapper .card__item {
+  max-width: 20.5rem;
+}
 
 .tab__nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 32px;
   margin-top: 35.04px;
+  margin-bottom: 24px;
+}
+@media (max-width: 1067px) {
+  .tab__nav {
+    gap: calc(16px + 16 * ((100vw - 390px) / 677));
+  }
 }
 @media (max-width: 1067px) {
   .tab__nav {
     margin-top: calc(24px + 11.04 * ((100vw - 390px) / 677));
+  }
+}
+@media (max-width: 1067px) {
+  .tab__nav {
+    margin-bottom: calc(16px + 8 * ((100vw - 390px) / 677));
   }
 }
 
@@ -3643,6 +3678,7 @@ a {
   font-size: 20px;
   font-style: normal;
   line-height: 2.15625rem;
+  text-wrap: nowrap;
 }
 @media (max-width: 1067px) {
   .tab__nav-item {

@@ -4,7 +4,13 @@
 	&__wrapper {
 		@include adaptiv-value("margin-top", toPX(4.5), toPX(3.69), 1);
 
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.95rem 1.88rem;
+
+		.card__item {
+			max-width: 20.5rem;
+		}
 	}
 }
