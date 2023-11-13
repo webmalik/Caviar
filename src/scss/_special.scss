@@ -1,0 +1,10 @@
+.special {
+	@include adaptiv-value("margin-bottom", toPX(4.44), toPX(4.19), 1);
+
+	&__wrapper {
+		@include adaptiv-value("margin-top", toPX(4.5), toPX(3.69), 1);
+
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

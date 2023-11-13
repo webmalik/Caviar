@@ -16,6 +16,9 @@ wmFunctions.readMore(767);
 const faq = document.querySelector('.faq')
 wmFunctions.tabs(faq);
 
+const sale = document.querySelector('.special')
+wmFunctions.tabs(sale);
+
 const faqPage = document.querySelector('.faq-page')
 wmFunctions.tabs(faqPage);
 

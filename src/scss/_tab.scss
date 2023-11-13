@@ -1,0 +1,37 @@
+.tab__nav {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	@include adaptiv-value("margin-top", toPX(2.19), toPX(1.5), 1);
+}
+
+.tab__nav-item {
+	position: relative;
+	color: #001a32;
+	font-weight: 700;
+	font-family: $font-family-montserrat;
+	@include adaptiv-value("font-size", toPX(1.25), toPX(1), 1);
+	font-style: normal;
+	line-height: 2.15625rem;
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -0.125rem;
+		left: -5%;
+		right: 0;
+		margin: auto;
+		width: 0%;
+		min-height: 0.125rem;
+		background-color: #001a32;
+		transition: all 0.8s ease-in-out;
+	}
+
+	&.active,
+	&:hover {
+		&::after {
+			width: 110%;
+		}
+	}
+}
