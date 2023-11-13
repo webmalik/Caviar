@@ -6,6 +6,7 @@ wmFunctions.accordionMobile(true);
 wmFunctions.banner();
 wmFunctions.best();
 wmFunctions.aboutSlider();
+// wmFunctions.cert();
 wmFunctions.better();
 wmFunctions.osetra();
 wmFunctions.reviews();

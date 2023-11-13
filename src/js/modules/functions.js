@@ -221,10 +221,49 @@ export function aboutSlider() {
 	});
 }
 
+// export function cert() {
+// 	const container = document.querySelector('.cert__container');
+// 	const items = document.querySelectorAll('.cert__item');
+
+
+// 	if (container) {
+// 		if (window.innerWidth < 992) {
+// 			items.forEach(function (item) {
+// 				item.classList.add('swiper-slide');
+// 			});
+
+// 			const cert = new Swiper(container, {
+// 				loop: true,
+// 				speed: 800,
+// 				modules: [Pagination, Autoplay],
+// 				slidesPerView: 1,
+
+// 				breakpoints: {
+// 					420: {
+// 						slidesPerView: 1,
+// 						spaceBetween: 20
+// 					},
+// 					992: {
+// 						slidesPerView: 2,
+// 						spaceBetween: 20
+// 					},
+
+
+// 				}
+// 			});
+// 		}
+// 	}
+// }
+
 export function better() {
 	if (window.innerWidth < 768) {
+		let wrapper;
 		const container = document.querySelector('.better__container');
-		const wrapper = container.querySelector('.better__wrapper');
+		if (container) {
+			wrapper = container.querySelector('.better__wrapper');
+		} else {
+			wrapper = false;
+		}
 		if (wrapper) {
 			const slides = wrapper.querySelectorAll('.card__item');
 
