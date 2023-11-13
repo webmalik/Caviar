@@ -186,6 +186,41 @@ export function best() {
 	});
 }
 
+export function aboutSlider() {
+	const about = new Swiper('.about-page__slider', {
+		loop: true,
+		speed: 800,
+		modules: [Pagination, Autoplay],
+		slidesPerView: 1,
+		//centeredSlides: true,
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// 	pauseOnMouseEnter: true,
+		// },
+		pagination: {
+			el: '.banner__pagination',
+			clickable: true,
+		},
+
+		breakpoints: {
+			400: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+
+			767: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 20
+			},
+		}
+	});
+}
+
 export function better() {
 	if (window.innerWidth < 768) {
 		const container = document.querySelector('.better__container');

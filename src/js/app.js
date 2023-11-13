@@ -5,6 +5,7 @@ wmFunctions.burgerMenu();
 wmFunctions.accordionMobile(true);
 wmFunctions.banner();
 wmFunctions.best();
+wmFunctions.aboutSlider();
 wmFunctions.better();
 wmFunctions.osetra();
 wmFunctions.reviews();

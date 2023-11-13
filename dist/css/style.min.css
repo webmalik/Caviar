@@ -63,22 +63,29 @@ button {
 @font-face {
   font-family: "Judson";
   font-display: swap;
+  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Judson";
+  font-display: swap;
   src: url("../fonts/Judson-400.woff") format("woff"), url("../fonts/Judson-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Judson";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Judson";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -89,6 +96,13 @@ button {
   font-style: normal;
 }
 @font-face {
+  font-family: "Judson";
+  font-display: swap;
+  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
@@ -98,8 +112,8 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
-  font-weight: 600;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -119,22 +133,8 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-  font-weight: 500;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 /*
@@ -1392,6 +1392,19 @@ a {
     padding-top: calc(50.08px + -26.08 * ((100vw - 390px) / 677));
   }
 }
+.promo__description picture,
+.promo__description img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 28rempx;
+}
+@media (max-width: 1067px) {
+  .promo__description picture,
+  .promo__description img {
+    margin-top: calc(27.2px + 0.8rem * ((100vw - 390px) / 677));
+  }
+}
 .promo__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1636,6 +1649,64 @@ a {
     margin-top: calc(21.92px + 43.04 * ((100vw - 390px) / 677));
   }
 }
+.about__slide picture,
+.about__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about__slide-title {
+  color: #001a32;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.025rem;
+  margin: 0.5rem 0;
+}
+.about__slide-text {
+  color: #000;
+  text-align: justify;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.about__slide-button {
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: auto;
+  margin-right: 0;
+  margin-top: 1rem;
+}
+
+.about-page__slider .swiper-wrapper {
+  padding-bottom: 3rem;
+}
+
+.about__write {
+  margin-bottom: 100px;
+}
+@media (max-width: 1067px) {
+  .about__write {
+    margin-bottom: calc(60px + 40 * ((100vw - 390px) / 677));
+  }
+}
+.about__write .about__title {
+  text-align: center;
+  margin: 1rem auto;
+}
+.about__write .banner__pagination {
+  bottom: 0 !important;
+}
+
 @media (max-width: 1440px) {
   .about__image {
     max-width: 512px;
@@ -1650,6 +1721,12 @@ a {
   .about__title {
     margin-bottom: 19.5rem;
     text-align: center;
+  }
+  .about__slide-title {
+    text-wrap: balance;
+  }
+  .about__slide-title br {
+    display: none;
   }
   .about__wrapper {
     margin-top: 1.75rem;
