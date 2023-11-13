@@ -289,6 +289,125 @@ export function delivery() {
 // 	}
 // }
 
+export function city() {
+	const container = document.querySelector('.city__slider');
+	const wrapper = document.querySelector('.city__wrapper');
+	const items = document.querySelectorAll('.city__item');
+
+
+	if (container) {
+		if (window.innerWidth < 992) {
+			wrapper.classList.add('swiper-wrapper');
+			items.forEach(function (item) {
+				item.classList.add('swiper-slide');
+			});
+
+			const city = new Swiper(container, {
+				loop: true,
+				speed: 800,
+				modules: [Pagination, Autoplay],
+				slidesPerView: 1,
+				spaceBetween: 20,
+				pagination: {
+					el: '.banner__pagination',
+					clickable: true,
+				},
+
+				breakpoints: {
+					420: {
+						slidesPerView: 1,
+						spaceBetween: 20
+					},
+					992: {
+						slidesPerView: 2,
+						spaceBetween: 20
+					},
+				}
+			});
+		}
+	}
+}
+
+export function article() {
+	const container = document.querySelector('.article__slider');
+	const wrapper = document.querySelector('.article__prod-wrapper');
+	const items = document.querySelectorAll('.card__item');
+
+
+	if (container) {
+		if (window.innerWidth < 992) {
+			wrapper.classList.add('swiper-wrapper');
+			items.forEach(function (item) {
+				item.classList.add('swiper-slide');
+			});
+
+			const city = new Swiper(container, {
+				loop: true,
+				speed: 800,
+				modules: [Pagination, Autoplay],
+				slidesPerView: 1,
+				spaceBetween: 20,
+				pagination: {
+					el: '.banner__pagination',
+					clickable: true,
+				},
+
+				breakpoints: {
+					420: {
+						slidesPerView: 1,
+						spaceBetween: 20
+					},
+					992: {
+						slidesPerView: 2,
+						spaceBetween: 20
+					},
+				}
+			});
+		}
+	}
+}
+
+export function recipes() {
+	const container = document.querySelector('.recipes__slider');
+	const wrapper = document.querySelector('.recipes__list');
+	const items = document.querySelectorAll('.recipes__card');
+
+
+	if (container) {
+		if (window.innerWidth < 992) {
+			wrapper.classList.add('swiper-wrapper');
+			items.forEach(function (item) {
+				item.classList.add('swiper-slide');
+			});
+
+			const city = new Swiper(container, {
+				loop: true,
+				speed: 800,
+				modules: [Pagination, Autoplay],
+				slidesPerView: 1,
+				spaceBetween: 20,
+				pagination: {
+					el: '.banner__pagination',
+					clickable: true,
+				},
+
+				breakpoints: {
+					420: {
+						slidesPerView: 1,
+						spaceBetween: 20
+					},
+					992: {
+						slidesPerView: 2,
+						spaceBetween: 20
+					},
+				}
+			});
+		}
+	}
+}
+
+
+
 export function better() {
 	if (window.innerWidth < 768) {
 		let wrapper;

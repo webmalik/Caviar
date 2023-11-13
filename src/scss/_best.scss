@@ -1,5 +1,8 @@
 .best {
 	&__title {
+		br {
+			display: none;
+		}
 	}
 
 	&__subtitle {

@@ -1,0 +1,57 @@
+.city {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+
+		@include adaptiv-value("margin-top", toPX(4.25), toPX(2), 1);
+		@include adaptiv-value("margin-bottom", toPX(4.25), toPX(3.63), 1);
+		position: relative;
+		padding-bottom: 3rem;
+	}
+
+	.banner__pagination {
+		bottom: 0 !important;
+	}
+
+	&__title {
+		color: #047678;
+		text-align: center;
+		font-family: $font-family-montserrat;
+		@include adaptiv-value("font-size", toPX(1.5), toPX(1.25), 1);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 2.15625rem; /* 172.5% */
+		text-transform: uppercase;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		box-sizing: border-box;
+
+		picture,
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+@include media-width($md, min) {
+	.city {
+		&__wrapper {
+			gap: 1.12rem 0.94rem;
+		}
+	}
+}
+@include media-width($md) {
+	.city {
+		&__wrapper {
+			display: flex;
+			box-sizing: border-box;
+		}
+		.container {
+			padding: 0;
+		}
+	}
+}
