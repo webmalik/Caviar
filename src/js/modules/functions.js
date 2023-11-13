@@ -221,6 +221,40 @@ export function aboutSlider() {
 	});
 }
 
+export function delivery() {
+	const container = document.querySelector('.delivery__slider');
+
+
+	if (container) {
+		const delivery = new Swiper(container, {
+			loop: true,
+			speed: 800,
+			modules: [Pagination, Autoplay],
+			slidesPerView: 1,
+			pagination: {
+				el: '.banner__pagination',
+				clickable: true,
+			},
+			breakpoints: {
+				420: {
+					slidesPerView: 1,
+					spaceBetween: 20
+				},
+
+				767: {
+					slidesPerView: 3,
+					spaceBetween: 25
+				},
+
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 30
+				},
+			}
+		});
+	}
+}
+
 // export function cert() {
 // 	const container = document.querySelector('.cert__container');
 // 	const items = document.querySelectorAll('.cert__item');

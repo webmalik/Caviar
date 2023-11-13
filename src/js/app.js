@@ -10,6 +10,7 @@ wmFunctions.aboutSlider();
 wmFunctions.better();
 wmFunctions.osetra();
 wmFunctions.reviews();
+wmFunctions.delivery();
 wmFunctions.readMore(767);
 
 

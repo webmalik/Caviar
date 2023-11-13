@@ -1,0 +1,62 @@
+.delivery {
+	&__best {
+		@include adaptiv-value("margin-top", toPX(4.5), toPX(2), 1);
+		@include adaptiv-value("margin-bottom", toPX(3.69), toPX(3.63), 1);
+	}
+
+	&__service {
+		@include adaptiv-value("margin-top", toPX(5.6), toPX(4.75), 1);
+	}
+
+	&__city {
+		background: #001a32;
+		padding: 0.45rem 0 1.81rem 0;
+		@include adaptiv-value("margin-top", toPX(2), toPX(2), 1);
+	}
+	&__slider {
+		position: relative;
+		padding-bottom: 3rem !important;
+
+		.banner__pagination {
+			bottom: 0 !important;
+		}
+	}
+
+	&__button {
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-between;
+		max-width: 8.0625rem;
+		margin-top: 1.81rem;
+	}
+
+	&__item {
+		display: flex !important;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		box-sizing: border-box;
+
+		picture,
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title {
+		color: #fff;
+		@include adaptiv-value("margin-bottom", toPX(1.5), toPX(1), 1);
+	}
+
+	&__name {
+		color: #047678;
+		font-family: $font-family-montserrat;
+		@include adaptiv-value("font-size", toPX(1.5), toPX(1.25), 1);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 2.15625rem; /* 143.75% */
+		text-transform: uppercase;
+	}
+}
