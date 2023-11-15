@@ -1,0 +1,33 @@
+ Volume in drive D has no label.
+ Volume Serial Number is 7EA7-1E02
+
+ Directory of D:\WEB\NEXON\Caviar\dist
+
+14.11.2023  01:53    <DIR>          .
+14.11.2023  01:49    <DIR>          ..
+14.11.2023  01:49    <DIR>          css
+14.11.2023  01:49    <DIR>          fonts
+14.11.2023  01:50    <DIR>          img
+14.11.2023  01:49    <DIR>          js
+https://webmalik.org.ua/dev/Caviar/about-company.html
+https://webmalik.org.ua/dev/Caviar/blog.html
+https://webmalik.org.ua/dev/Caviar/blog-item.html
+https://webmalik.org.ua/dev/Caviar/cert.html
+https://webmalik.org.ua/dev/Caviar/city.html
+https://webmalik.org.ua/dev/Caviar/club.html
+https://webmalik.org.ua/dev/Caviar/delivery.html
+https://webmalik.org.ua/dev/Caviar/essentials.html
+https://webmalik.org.ua/dev/Caviar/faq.html
+https://webmalik.org.ua/dev/Caviar/gift.html
+https://webmalik.org.ua/dev/Caviar/index.html
+https://webmalik.org.ua/dev/Caviar/osetra.html
+https://webmalik.org.ua/dev/Caviar/our.html
+https://webmalik.org.ua/dev/Caviar/recipes.html
+https://webmalik.org.ua/dev/Caviar/recipes-item.html
+https://webmalik.org.ua/dev/Caviar/sets.html
+https://webmalik.org.ua/dev/Caviar/shopping.html
+https://webmalik.org.ua/dev/Caviar/special.html
+https://webmalik.org.ua/dev/Caviar/wholasale.html
+14.11.2023  01:53                 0 files.txt
+              20 File(s)      1ÿ095ÿ980 bytes
+               6 Dir(s)  514ÿ716ÿ901ÿ376 bytes free
