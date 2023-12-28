@@ -31,6 +31,15 @@
 	&__header {
 	}
 
+	&__fl-wrapper {
+		display: block;
+		.article__image {
+			max-width: 50%;
+			float: left;
+			margin: 0 2rem 2rem 0;
+		}
+	}
+
 	&__subtitle {
 		color: #000;
 		font-family: $font-family-montserrat;

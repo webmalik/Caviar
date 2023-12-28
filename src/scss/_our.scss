@@ -37,6 +37,30 @@
 		}
 	}
 
+	&__slid {
+		.swiper {
+			padding-bottom: 2.5rem;
+			padding-top: 3.44rem;
+		}
+
+		.banner__pagination {
+			bottom: 0.19rem !important;
+		}
+	}
+	&__slide {
+		display: flex !important;
+		flex-direction: column;
+		gap: 1.81rem;
+		max-width: 23.125rem;
+
+		picture,
+		img {
+			max-height: 16.3125rem;
+			width: auto;
+			height: 100%;
+		}
+	}
+
 	&__text {
 		color: #000;
 		text-align: justify;

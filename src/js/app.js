@@ -12,6 +12,7 @@ wmFunctions.osetra();
 wmFunctions.city();
 wmFunctions.article();
 wmFunctions.recipes();
+wmFunctions.our();
 wmFunctions.reviews();
 wmFunctions.delivery();
 wmFunctions.readMore(767);

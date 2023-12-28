@@ -528,6 +528,41 @@ export function reviews() {
 		}
 	});
 }
+export function our() {
+	const best = new Swiper('.our__slider', {
+		//loop: true,
+		speed: 800,
+		modules: [Pagination, Autoplay, Navigation],
+		slidesPerView: 1,
+		spaceBetween: 29,
+		//centeredSlides: true,
+		//observer: true,
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// 	pauseOnMouseEnter: true,
+		// },
+		pagination: {
+			el: '.banner__pagination',
+			clickable: true,
+		},
+		breakpoints: {
+			400: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+
+			767: {
+				slidesPerView: 2,
+				spaceBetween: 29
+			},
+			992: {
+				slidesPerView: 3.5,
+				spaceBetween: 29
+			},
+		}
+	});
+}
 
 export function tabs(container) {
 	if (container) {
