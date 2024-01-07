@@ -68,6 +68,13 @@ button {
   font-style: normal;
 }
 @font-face {
+  font-family: "Judson";
+  font-display: swap;
+  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
@@ -96,27 +103,6 @@ button {
   font-style: normal;
 }
 @font-face {
-  font-family: "Judson";
-  font-display: swap;
-  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
@@ -135,6 +121,20 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 /*
@@ -3840,6 +3840,10 @@ a {
     margin-top: 30px;
     margin-bottom: 30px;
   }
+  .recipes__list {
+    gap: 0;
+    flex-wrap: nowrap;
+  }
   .recipes__menu {
     flex-wrap: wrap;
     gap: 23px 6rem;
@@ -4055,6 +4059,9 @@ a {
   max-width: 100%;
   margin: 0;
 }
+.article.recipes__article .article__products {
+  margin-top: 1.88rem;
+}
 .article__title {
   color: #001a32;
   text-align: left;
@@ -4253,6 +4260,19 @@ a {
 @media (max-width: 992px) {
   .article.blog {
     margin-top: 3rem;
+  }
+  .article.recipes__article .article__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .article.recipes__article .article__image {
+    display: flex;
+    grid-area: none;
+    max-width: 100%;
+    margin: 0;
+  }
+  .article.recipes__article .article__products {
+    margin-top: 1.88rem;
   }
   .article__wrapper {
     display: flex;

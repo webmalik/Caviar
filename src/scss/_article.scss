@@ -12,6 +12,10 @@
 			max-width: 100%;
 			margin: 0;
 		}
+
+		.article__products {
+			margin-top: 1.88rem;
+		}
 	}
 	&__title {
 		color: #001a32;
@@ -214,6 +218,23 @@
 	.article {
 		&.blog {
 			margin-top: 3rem;
+		}
+
+		&.recipes__article {
+			.article__wrapper {
+				display: flex;
+				flex-direction: column;
+			}
+			.article__image {
+				display: flex;
+				grid-area: none;
+				max-width: 100%;
+				margin: 0;
+			}
+
+			.article__products {
+				margin-top: 1.88rem;
+			}
 		}
 		&__wrapper {
 			display: flex;
