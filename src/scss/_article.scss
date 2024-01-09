@@ -12,15 +12,12 @@
 	}
 	&__wrapper {
 		display: grid;
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 0 1.94rem;
 	}
 
 	&__image {
-		//grid-area: 1/1/3/2;
-		max-width: 50%;
-		float: left;
-		margin: 0 2rem 2rem 0;
+		grid-area: 1/1/3/2;
 
 		picture,
 		img {
@@ -76,13 +73,12 @@
 
 	&__text {
 		color: #000;
-		text-align: right;
+		text-align: justify;
 		font-family: $font-family-montserrat;
 		font-size: 1rem;
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
-		display: inline;
 		@include adaptiv-value("margin-bottom", toPX(1.87), toPX(2.37), 1);
 	}
 
