@@ -1,5 +1,22 @@
 .article {
 	@include adaptiv-value("margin-top", toPX(2.75), toPX(1.44), 1);
+
+	&.recipes__article {
+		.article__wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		.article__image {
+			display: flex;
+			grid-area: 1/1/3/2;
+			max-width: 100%;
+			margin: 0;
+		}
+
+		.article__products {
+			margin-top: 1.88rem;
+		}
+	}
 	&__title {
 		color: #001a32;
 		text-align: left;
@@ -17,7 +34,10 @@
 	}
 
 	&__image {
-		grid-area: 1/1/3/2;
+		//
+		max-width: 50%;
+		float: left;
+		margin: 0 2rem 2rem 0;
 
 		picture,
 		img {
@@ -197,6 +217,23 @@
 	.article {
 		&.blog {
 			margin-top: 3rem;
+		}
+
+		&.recipes__article {
+			.article__wrapper {
+				display: flex;
+				flex-direction: column;
+			}
+			.article__image {
+				display: flex;
+				grid-area: none;
+				max-width: 100%;
+				margin: 0;
+			}
+
+			.article__products {
+				margin-top: 1.88rem;
+			}
 		}
 		&__wrapper {
 			display: flex;
