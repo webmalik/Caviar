@@ -1,0 +1,215 @@
+.reviews {
+	&__slider {
+		@include adaptiv-value("margin-top", toPX(3.38), toPX(1.5), 1);
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		padding: 0;
+		align-items: center;
+		border-bottom: 2px solid $blue-color;
+		margin-bottom: 1.5rem;
+	}
+
+	&__info {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+
+		.reviews__title {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.reviews__stars {
+			@include adaptiv-value("margin-top", toPX(0.5), toPX(0.5), 1);
+			@include adaptiv-value("margin-bottom", toPX(0.38), toPX(0.38), 1);
+		}
+	}
+
+	&__slide-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+	&__date {
+		color: $blue-color;
+		font-family: $font-family-montserrat;
+		@include adaptiv-value("font-size", toPX(0.875), toPX(0.875), 1);
+		font-style: normal;
+		font-weight: 500;
+		text-align: left;
+		line-height: 100%; /* 0% */
+	}
+
+	&__slide-title {
+		color: $blue-color;
+		font-family: $font-family-montserrat;
+		@include adaptiv-value("font-size", toPX(1.25), toPX(0.875), 1);
+		font-style: normal;
+		font-weight: 500;
+		text-align: left;
+		line-height: 100%; /* 0% */
+		letter-spacing: -0.05369rem;
+		width: 100%;
+		margin: 0.5rem 0;
+	}
+
+	&__wrapper {
+	}
+
+	&__arrow {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		@include adaptiv-value("margin-top", toPX(1.08), toPX(1.08), 1);
+		@include adaptiv-value("margin-bottom", toPX(0.38), toPX(0.38), 1);
+
+		&-prev,
+		&-next {
+			cursor: pointer;
+			@include adaptiv-value("font-size", toPX(2), toPX(1.5), 1);
+			font-family: $font-family-judson;
+			font-weight: 600;
+		}
+	}
+
+	&__arrow-prev {
+		&::before {
+			content: "<";
+		}
+	}
+
+	&__arrow-next {
+		&::before {
+			content: ">";
+		}
+	}
+
+	&__slide {
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__author {
+		font-weight: 600;
+		font-style: normal;
+		color: $blue-color;
+		text-wrap: balance;
+		font-family: $font-family-montserrat;
+		@include adaptiv-value("font-size", toPX(0.80569), toPX(0.875), 1);
+		line-height: 1.73725rem; /* 215.625% */
+		width: 100%;
+		text-align: left;
+	}
+
+	&__footer {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__name {
+		max-width: 45%;
+		width: 100%;
+		text-align: center;
+		span {
+			color: $blue-color;
+			font-family: $font-family-montserrat;
+			@include adaptiv-value("font-size", toPX(0.75), toPX(0.75), 1);
+			font-style: normal;
+			font-weight: 500;
+			line-height: 100%; /* 0% */
+			letter-spacing: -0.05369rem;
+			text-align: center;
+		}
+	}
+
+	&__image {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		max-width: 45%;
+
+		picture,
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		display: flex;
+		width: 100%;
+		gap: 1rem;
+	}
+
+	&__stars {
+		display: flex;
+		align-items: center;
+		gap: 0.125rem;
+
+		span {
+			svg {
+				width: 1.5rem;
+			}
+		}
+	}
+
+	&__title {
+		color: $blue-color;
+		font-family: $font-family-montserrat;
+		@include adaptiv-value("font-size", toPX(1.34281), toPX(1), 1);
+		font-style: normal;
+		font-weight: 500;
+		line-height: 100%; /* 0% */
+		letter-spacing: -0.05369rem;
+		@include adaptiv-value("margin-top", toPX(1.08), toPX(1.08), 1);
+		@include adaptiv-value("margin-bottom", toPX(0.38), toPX(0.38), 1);
+	}
+
+	&__pagination {
+		@include adaptiv-value("margin-top", toPX(3.56), toPX(1.37), 1);
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		color: #000;
+		text-wrap: balance;
+		font-family: $font-family-montserrat;
+		@include adaptiv-value("font-size", toPX(0.80569), toPX(0.875), 1);
+		font-style: italic;
+		font-weight: 400;
+		line-height: 1.73725rem; /* 215.625% */
+	}
+}
+@include media-width($sm) {
+	.reviews {
+		&__slide {
+			flex-direction: column;
+		}
+
+		&__header {
+		}
+		&__info {
+			width: 100%;
+			justify-content: end;
+		}
+		&__stars {
+			span {
+				svg {
+					width: 1rem;
+				}
+			}
+		}
+	}
+}

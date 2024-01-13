@@ -1,0 +1,68 @@
+.feedback {
+	&__title {
+	}
+
+	&__subtitle {
+	}
+
+	&__container {
+		background-color: $green-color;
+		padding: 5rem 1.19rem;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		max-width: 41.65625rem;
+		margin: 0 auto;
+		@include adaptiv-value("gap", toPX(4), toPX(3.5), 1);
+
+		input {
+			color: #fff;
+			font-family: $font-family-montserrat;
+			font-size: 0.875rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 2.15625rem; /* 246.429% */
+			text-transform: capitalize;
+			background-color: transparent;
+			outline: none;
+			border: none;
+			border-bottom: 2px solid #fff;
+
+			&::placeholder {
+				color: #fff;
+				font-family: $font-family-montserrat;
+				font-size: 0.875rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 2.15625rem; /* 246.429% */
+				text-transform: capitalize;
+			}
+		}
+
+		label {
+			color: #fff;
+			font-family: $font-family-montserrat;
+			font-size: 0.875rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 2.15625rem; /* 246.429% */
+			text-transform: capitalize;
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			margin-top: -3rem;
+		}
+
+		button {
+			margin: -2rem auto;
+		}
+
+		textarea {
+			min-height: 9.125rem;
+		}
+	}
+}

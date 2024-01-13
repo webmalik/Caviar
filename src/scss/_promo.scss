@@ -1,0 +1,73 @@
+.promo {
+	&__title {
+		@include adaptiv-value("padding-top", toPX(1.5), toPX(1), 1);
+
+		&.mw {
+			@include adaptiv-value("max-width", toPX(45), toPX(40), 1);
+			margin: 0 auto;
+			@include adaptiv-value("line-height", toPX(2.78125), toPX(2.1875), 1);
+			line-height: 2.78125rem;
+		}
+
+		&.title__yellow {
+			@include adaptiv-value("padding-top", toPX(1.5), toPX(3.13), 1);
+		}
+	}
+
+	&__description {
+		picture,
+		img {
+			display: block;
+			width: 100%;
+			object-fit: cover;
+			@include adaptiv-value("margin-top", toPX(1.75rem), toPX(1.7), 1);
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		@include adaptiv-value("gap", toPX(3.69), toPX(2), 1);
+		@include adaptiv-value("margin-bottom", toPX(4.69), toPX(2), 1);
+
+		.promo__description {
+			text-align: justify;
+		}
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		@include adaptiv-value("gap", toPX(10.62), toPX(3.14), 1);
+		margin-top: -16.5rem;
+	}
+
+	&__bg {
+		background-color: $blue-color;
+		@include adaptiv-value("margin-top", toPX(2.13), toPX(1.5), 1);
+		padding-bottom: 18.5rem;
+	}
+}
+@include media-width($sm) {
+	.promo {
+		&__container {
+			grid-template-columns: repeat(1, 1fr);
+			margin-top: -45.7rem;
+
+			.card__item {
+				&:first-child {
+					.card__price {
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		&__wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		&__bg {
+			padding-bottom: 48rem;
+		}
+	}
+}
