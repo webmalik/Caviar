@@ -63,6 +63,7 @@ button {
 @font-face {
   font-family: "Judson";
   font-display: swap;
+<<<<<<< HEAD
   src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -70,6 +71,8 @@ button {
 @font-face {
   font-family: "Judson";
   font-display: swap;
+=======
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   src: url("../fonts/Judson-400.woff") format("woff"), url("../fonts/Judson-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -82,6 +85,16 @@ button {
   font-style: normal;
 }
 @font-face {
+<<<<<<< HEAD
+=======
+  font-family: "Judson";
+  font-display: swap;
+  src: url("../fonts/Judson-700.woff") format("woff"), url("../fonts/Judson-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
@@ -119,6 +132,7 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
+<<<<<<< HEAD
   src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
@@ -126,6 +140,8 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
+=======
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -133,6 +149,16 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
+<<<<<<< HEAD
+=======
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -386,7 +412,11 @@ a {
 #nav-icon3,
 #nav-icon4 {
   width: 25px;
+<<<<<<< HEAD
   height: 16px;
+=======
+  height: 25px;
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -870,12 +900,18 @@ a {
   .header__logo--mobile {
     display: block;
     margin: 0 auto;
+<<<<<<< HEAD
     max-width: 6.8125rem;
     width: 100%;
   }
   .header__logo--mobile.header__logo-inverce {
     display: block;
     max-width: 6.8125rem;
+=======
+  }
+  .header__logo--mobile.header__logo-inverce {
+    display: block;
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   }
   .header__account {
     display: none;
@@ -1162,7 +1198,10 @@ a {
   .banner__image {
     position: relative;
     overflow: hidden;
+<<<<<<< HEAD
     max-height: 80dvh;
+=======
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   }
   .banner__image picture,
   .banner__image img {
@@ -1170,6 +1209,7 @@ a {
     width: auto;
     height: 100%;
   }
+<<<<<<< HEAD
   .banner__image.desctop {
     display: none;
   }
@@ -1180,6 +1220,8 @@ a {
   .banner__image.mobile img {
     width: 100%;
   }
+=======
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   .banner__pagination {
     bottom: 2rem !important;
   }
@@ -1192,7 +1234,11 @@ a {
     display: none;
   }
   .banner__who {
+<<<<<<< HEAD
     padding-top: 10rem;
+=======
+    padding-top: 8rem;
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   }
   .banner__subtitle {
     margin-top: 1.25rem;
@@ -1213,9 +1259,12 @@ a {
   .banner__center .banner__logo {
     margin: 10rem auto 0;
   }
+<<<<<<< HEAD
   .banner__image {
     max-height: none;
   }
+=======
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   .banner__image.desctop {
     display: none;
   }
@@ -1778,9 +1827,12 @@ a {
   }
 }
 @media (max-width: 767px) {
+<<<<<<< HEAD
   .about .center__more {
     justify-content: center;
   }
+=======
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   .about__title {
     margin-bottom: 19.5rem;
     text-align: center;
@@ -1951,7 +2003,10 @@ a {
   display: flex;
   align-items: center;
   gap: 1.06rem;
+<<<<<<< HEAD
   cursor: pointer;
+=======
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
 }
 @media (max-width: 1067px) {
   .faq__quetion {
@@ -2063,10 +2118,13 @@ a {
     margin-bottom: 28rem;
     text-align: center;
   }
+<<<<<<< HEAD
   .faq__item::after {
     left: 0;
     max-width: 60%;
   }
+=======
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   .faq .container {
     width: auto;
   }
@@ -2331,6 +2389,12 @@ a {
   .reviews__slide {
     flex-direction: column;
   }
+<<<<<<< HEAD
+=======
+  .reviews__header {
+    flex-direction: column;
+  }
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   .reviews__info {
     width: 100%;
     justify-content: end;
@@ -3357,7 +3421,11 @@ a {
 }
 @media (max-width: 1067px) {
   .deno__wrapper {
+<<<<<<< HEAD
     margin-bottom: calc(0px + 49.92 * ((100vw - 390px) / 677));
+=======
+    margin-bottom: calc(37.92px + 12 * ((100vw - 390px) / 677));
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   }
 }
 .deno__image {
@@ -3580,9 +3648,12 @@ a {
     left: 0;
     border-radius: 0 17.65625rem 17.65625rem 0;
   }
+<<<<<<< HEAD
   .our__slide {
     max-width: 100%;
   }
+=======
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   .our__wrapper {
     display: flex;
     flex-direction: column;
@@ -3866,8 +3937,13 @@ a {
     margin-bottom: 30px;
   }
   .recipes__list {
+<<<<<<< HEAD
     flex-wrap: nowrap;
     flex-direction: column;
+=======
+    gap: 0;
+    flex-wrap: nowrap;
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   }
   .recipes__menu {
     flex-wrap: wrap;
@@ -4298,6 +4374,7 @@ a {
   .article.recipes__article .article__products {
     margin-top: 1.88rem;
   }
+<<<<<<< HEAD
   .article__fl-wrapper {
     display: block;
     overflow: visible;
@@ -4311,6 +4388,8 @@ a {
     margin-bottom: 1.5rem;
     margin-left: -1.5rem;
   }
+=======
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   .article__wrapper {
     display: flex;
     flex-direction: column;
@@ -4332,14 +4411,21 @@ a {
   }
   .article__header {
     order: 1;
+<<<<<<< HEAD
     margin-top: 9rem;
+=======
+    margin-top: 7rem;
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
   }
   .article__content {
     margin-top: 1.5rem;
     order: 3;
   }
+<<<<<<< HEAD
   .blog__slider-page .recipes__list {
     gap: 0;
     flex-direction: row !important;
   }
+=======
+>>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
 }
