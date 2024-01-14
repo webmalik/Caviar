@@ -69,15 +69,9 @@
 		justify-content: end;
 		@include adaptiv-value("margin-top", toPX(4.06), toPX(1.37), 1);
 	}
-
-	&__button {
-	}
 }
 
 .about {
-	&__slider {
-	}
-
 	&__slide {
 		picture,
 		img {
@@ -148,12 +142,9 @@
 
 @include media-width($sm) {
 	.about {
-<<<<<<< HEAD
 		.center__more {
 			justify-content: center;
 		}
-=======
->>>>>>> eed6e5d18b2d2ee1b0bc911444ecb9e8ff760a3a
 		&__title {
 			margin-bottom: 19.5rem;
 			text-align: center;
