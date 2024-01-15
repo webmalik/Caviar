@@ -84,13 +84,6 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
   src: url("../fonts/Montserrat-400.woff") format("woff"), url("../fonts/Montserrat-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -112,8 +105,8 @@ button {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
-  font-weight: 600;
+  src: url("../fonts/Montserrat-500.woff") format("woff"), url("../fonts/Montserrat-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -128,6 +121,13 @@ button {
   font-display: swap;
   src: url("../fonts/Montserrat-700.woff") format("woff"), url("../fonts/Montserrat-700.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-600.woff") format("woff"), url("../fonts/Montserrat-600.woff2") format("woff2");
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
@@ -4329,6 +4329,9 @@ a {
     grid-area: none;
     max-width: 100%;
     margin: 0;
+  }
+  .article.recipes__article .article__prod-title {
+    text-align: center;
   }
   .article.recipes__article .article__products {
     margin-top: 1.88rem;
