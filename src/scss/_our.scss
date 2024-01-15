@@ -87,6 +87,14 @@
 
 		&__slide {
 			max-width: 100%;
+			justify-content: space-between;
+
+			picture,
+			img {
+				display: block;
+				object-fit: cover;
+				max-height: 8.33356rem;
+			}
 		}
 
 		&__wrapper {

@@ -183,5 +183,11 @@
 		&__image--wrapper {
 			max-height: 18rem;
 		}
+
+		&__buttons {
+			&.center__more {
+				justify-content: center;
+			}
+		}
 	}
 }

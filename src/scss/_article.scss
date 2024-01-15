@@ -2,6 +2,16 @@
 	@include adaptiv-value("margin-top", toPX(2.75), toPX(1.44), 1);
 
 	&.recipes__article {
+		.article__subtitle {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+
+			.article__stars {
+				display: none;
+				align-items: center;
+			}
+		}
 		.article__wrapper {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -215,6 +225,9 @@
 
 @include media-width($md) {
 	.article {
+		&__stars {
+			display: none;
+		}
 		&.blog {
 			margin-top: 3rem;
 		}
@@ -223,6 +236,11 @@
 			.article__wrapper {
 				display: flex;
 				flex-direction: column;
+			}
+			.article__subtitle {
+				.article__stars {
+					display: flex;
+				}
 			}
 			.article__image {
 				display: flex;

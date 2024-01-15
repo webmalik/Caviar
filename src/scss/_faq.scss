@@ -122,6 +122,9 @@
 
 	&-page {
 		.faq {
+			&__menu {
+				justify-content: center;
+			}
 			&__content {
 				max-width: 100%;
 			}
