@@ -192,7 +192,7 @@
 			justify-content: center;
 		}
 		&__content {
-			padding-top: 4rem;
+			padding-top: 8rem;
 			justify-content: start;
 		}
 		.sets__subtitle {
@@ -202,6 +202,7 @@
 		&__image {
 			position: relative;
 			overflow: hidden;
+			max-height: 80dvh;
 
 			picture,
 			img {
@@ -210,6 +211,19 @@
 				height: 100%;
 				// left: 50%;
 				// transform: translateX(-50%);
+			}
+		}
+
+		&__image {
+			&.desctop {
+				display: none;
+			}
+			&.mobile {
+				display: block;
+				picture,
+				img {
+					width: 100%;
+				}
 			}
 		}
 		&__pagination {
@@ -230,7 +244,7 @@
 		}
 
 		&__who {
-			padding-top: 8rem;
+			padding-top: 10rem;
 		}
 
 		&__subtitle {
@@ -262,6 +276,7 @@
 			}
 		}
 		&__image {
+			max-height: none;
 			&.desctop {
 				display: none;
 			}

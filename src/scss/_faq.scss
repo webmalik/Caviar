@@ -62,6 +62,7 @@
 		display: flex;
 		align-items: center;
 		gap: 1.06rem;
+		cursor: pointer;
 
 		&::before {
 			content: "";
@@ -121,6 +122,9 @@
 
 	&-page {
 		.faq {
+			&__menu {
+				justify-content: center;
+			}
 			&__content {
 				max-width: 100%;
 			}
@@ -167,6 +171,13 @@
 		&__title {
 			margin-bottom: 28rem;
 			text-align: center;
+		}
+
+		&__item {
+			&::after {
+				left: 0;
+				max-width: 60%;
+			}
 		}
 		.container {
 			width: auto;

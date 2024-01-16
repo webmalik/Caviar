@@ -2,7 +2,7 @@
 	&__wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		@include adaptiv-value("margin-bottom", toPX(3.12), toPX(2.37), 1);
+		@include adaptiv-value("margin-bottom", toPX(3.12), toPX(0), 1);
 	}
 
 	&__image {

@@ -533,8 +533,8 @@ export function our() {
 		//loop: true,
 		speed: 800,
 		modules: [Pagination, Autoplay, Navigation],
-		slidesPerView: 1,
-		spaceBetween: 29,
+		slidesPerView: 2,
+		spaceBetween: 15,
 		//centeredSlides: true,
 		//observer: true,
 		// autoplay: {
@@ -547,8 +547,14 @@ export function our() {
 			clickable: true,
 		},
 		breakpoints: {
+			320: {
+				spaceBetween: 10,
+			},
+			360: {
+				spaceBetween: 15,
+			},
 			400: {
-				slidesPerView: 1,
+				slidesPerView: 2,
 				spaceBetween: 20
 			},
 

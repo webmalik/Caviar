@@ -254,9 +254,12 @@
 		&__logo--mobile {
 			display: block;
 			margin: 0 auto;
+			max-width: 6.8125rem;
+			width: 100%;
 
 			&.header__logo-inverce {
 				display: block;
+				max-width: 6.8125rem;
 			}
 		}
 

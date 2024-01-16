@@ -2,6 +2,16 @@
 	@include adaptiv-value("margin-top", toPX(2.75), toPX(1.44), 1);
 
 	&.recipes__article {
+		.article__subtitle {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+
+			.article__stars {
+				display: none;
+				align-items: center;
+			}
+		}
 		.article__wrapper {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -215,6 +225,9 @@
 
 @include media-width($md) {
 	.article {
+		&__stars {
+			display: none;
+		}
 		&.blog {
 			margin-top: 3rem;
 		}
@@ -224,6 +237,11 @@
 				display: flex;
 				flex-direction: column;
 			}
+			.article__subtitle {
+				.article__stars {
+					display: flex;
+				}
+			}
 			.article__image {
 				display: flex;
 				grid-area: none;
@@ -231,10 +249,28 @@
 				margin: 0;
 			}
 
+			.article__prod-title {
+				text-align: center;
+			}
+
 			.article__products {
 				margin-top: 1.88rem;
 			}
 		}
+		&__fl-wrapper {
+			display: block;
+			overflow: visible;
+			.article__image {
+				max-width: 120%;
+				overflow: hidden;
+				width: calc(100% + 2.8rem);
+				float: left;
+				margin: 0;
+				margin-bottom: 1.5rem;
+				margin-left: -1.5rem;
+			}
+		}
+
 		&__wrapper {
 			display: flex;
 			flex-direction: column;
@@ -262,12 +298,18 @@
 
 		&__header {
 			order: 1;
-			margin-top: 7rem;
+			margin-top: 9rem;
 		}
 
 		&__content {
 			margin-top: 1.5rem;
 			order: 3;
+		}
+	}
+	.blog__slider-page {
+		.recipes__list {
+			gap: 0;
+			flex-direction: row !important;
 		}
 	}
 }

@@ -60,3 +60,11 @@
 		text-transform: uppercase;
 	}
 }
+
+@include media-width($md) {
+	.delivery {
+		&__name {
+			margin-bottom: 1rem;
+		}
+	}
+}
